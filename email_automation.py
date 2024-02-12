@@ -51,14 +51,6 @@ for mail_to in mail_list:
     family_nameName = name[find_des] 
     email_text = f""""
 Hello Dr.{family_nameName},
-I hope you are fine.
-I am interested in continuing my education toward a direct Ph.D. and doing research in the field of security combining with AI.
-
-As I reviewed your honorable research works regarding cybersecurity, I found them perfectly close to my research interests. Therefore, I would like to ask you kindly to consider me as a candidate for the direct Ph.D. position working under your supervision for 2022. It would be very kind of you to look at my CV and let me know if there is an opportunity for me to join your research group.
-
-I am a bachelor’s degree graduated of electrical engineering from Iran University of Science and Technology (top 3 university in Iran). I have won the first prize in an international competition, named Huawei ICT Skill, in 2017. I have trained in Huawei HQ and Huawei University in Shenzhen, China. Besides, I was accepted at Padua University (top 200 university in QS ranking) for fall 2020 in MS Cybersecurity, but unfortunately my visa was rejected. Within 3 months participating in classes online, I read my lessons completely such as Machine learning, Information security, Cryptography, and Cognition and computation. Moreover, I have one year of versatile professional work experience in R&D cybersecurity development engineer. In specific, research on event correlation (Elasticsearch) and threat intelligence (User Behavior Analysis), and etc.
-Full details of my skills are available in the enclosed CV.
-Looking forward to hearing from you.
 
 Best Regards, 
 """
@@ -69,7 +61,7 @@ Best Regards,
     msg['Subject'] = subject
     msg.attach(MIMEText(message, 'plain'))
     
-    filename = "CV - Arastoo Zibaeirad.pdf"  
+    filename = "CV - .pdf"
     with open(filename, "rb") as attachment:
         payload = MIMEBase("application", "octet-stream")
         payload.set_payload(attachment.read())
